@@ -28,7 +28,4 @@ class User < ApplicationRecord
    has_many :posts, dependent: :destroy
    has_many :coments, dependent: :destroy
 
-   #Validations
-   validates :name, :reference, :price, :quantity, :brand, :category_id, :image, presence: true
-
 end

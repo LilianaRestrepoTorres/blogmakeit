@@ -1,0 +1,19 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+nav.navbar{
+  margin-bottom: 0;
+}
+
+div#productsContainer{
+  margin-top: 20px;
+}
+
+.thumbnail{
+  height: 400px;
+}
+
+p.description{
+  height: 60px;
+  overflow: auto;
+}
