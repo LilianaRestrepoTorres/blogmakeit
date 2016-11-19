@@ -19,6 +19,8 @@ gem 'coffee-rails', '~> 4.2'
 #Install annotate gem -> generate comments to model
 gem 'annotate'
 
+#Install gem for Markdown
+gem 'redcarpet'
 #Install bootstrap responsive framework
 gem 'bootstrap-sass', '~> 3.3.6'
 

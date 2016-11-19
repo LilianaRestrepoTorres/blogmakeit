@@ -24,3 +24,33 @@
   <%= link_to 'Edit', edit_post_path(@post) %> |
 <% end %>
 <%= link_to 'Back', posts_path %>
+
+<% if coments = @post.coments %>
+  <% coments.each do |com| %>
+    <p>
+      <%= com.user.email %>
+    </p>
+    <p>
+      <%= com.created_at %>
+    </p>
+    <p>
+      <%= com.body %>
+    </p>
+  <% end %>
+<% end %>
+
+<% if user_signed_in? %>
+  <%= form_for(@coment) do |f| %>
+
+    <%= f.hidden_field :post_id, :value => @post.id %>
+
+    <div class="field">
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<% end %>
